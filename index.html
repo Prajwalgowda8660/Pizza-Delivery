@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pizza Delivery Website</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Pizza Delivery</h1>
+    </header>
+
+    <section class="order-form">
+        <h2>Place Your Order</h2>
+        <div class="form-container">
+            <div class="form-group">
+                <label for="size">Size:</label>
+                <select id="size" onchange="calculateTotal()">
+                    <option value="0">Small</option>
+                    <option value="1">Medium</option>
+                    <option value="2">Large</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Toppings:</label>
+                <div id="toppings">
+                    <div class="topping-option">
+                        <input type="checkbox" value="Pepperoni" onchange="calculateTotal()">
+                        <label>Pepperoni</label>
+                    </div>
+                    <div class="topping-option">
+                        <input type="checkbox" value="Mushrooms" onchange="calculateTotal()">
+                        <label>Mushrooms</label>
+                    </div>
+                    <div class="topping-option">
+                        <input type="checkbox" value="Onions" onchange="calculateTotal()">
+                        <label>Onions</label>
+                    </div>
+                    <div class="topping-option">
+                        <input type="checkbox" value="Sausage" onchange="calculateTotal()">
+                        <label>Sausage</label>
+                    </div>
+                    <div class="topping-option">
+                        <input type="checkbox" value="Bacon" onchange="calculateTotal()">
+                        <label>Bacon</label>
+                    </div>
+                    <div class="topping-option">
+                        <input type="checkbox" value="Black Olives" onchange="calculateTotal()">
+                        <label>Black Olives</label>
+                    </div>
+                    <div class="topping-option">
+                        <input type="checkbox" value="Green Peppers" onchange="calculateTotal()">
+                        <label>Green Peppers</label>
+                    </div>
+                    <div class="topping-option">
+                        <input type="checkbox" value="Tomatoes" onchange="calculateTotal()">
+                        <label>Tomatoes</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Total Price:</label>
+                <span id="total">$0.00</span>
+            </div>
+
+            <div class="form-group">
+                <button onclick="placeOrder()">Place Order</button>
+            </div>
+
+            <div class="form-group" id="order-message" style="display:none;">
+                <span>Your order was successful!</span>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; Pizza Delivery</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
